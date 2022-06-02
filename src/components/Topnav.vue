@@ -15,7 +15,9 @@
                 <i class="fa fa-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <router-link id="a" to="./directorylistings">Mentors</router-link>
+                <router-link id="a" to="./directorylistings"
+                  >Mentors</router-link
+                >
                 <router-link id="a" to="./StudentsViews">Students</router-link>
               </div>
             </li>
@@ -31,7 +33,7 @@
                 <router-link id="a" to="./StudentsViews">Schools</router-link>
               </div>
             </li>
-            
+
             <li class="dropdown">
               <a href="market.html" class="dropbtn"
                 ><i class="fa fa-shopping-basket"></i> Academy
@@ -85,6 +87,38 @@
       </div>
     </div>
   </nav>
+
+  <!-- media queries -->
+  <div class="collapsible">
+    <nav>
+      <div class="row">
+        <div class="col-sm-4">
+          <router-link to="/"
+            ><h4 class="title"><i>GirlsInICT</i><i class="fa fa-home"></i></h4
+          ></router-link>
+        </div>
+        <div class="col-sm-4">
+          <div><i class="fa fa-bars"></i></div>
+         
+        </div>
+        <div class="col-sm-4 search">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="What's on your mind?"
+                name="search"
+              />
+            </div>
+          </form>
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
@@ -96,6 +130,9 @@
   font-size: 30px;
 }
 
+.collapsible {
+  display: none;
+}
 .row4 .title:hover {
   color: #0e0f7c;
   background-color: whitesmoke;
@@ -171,7 +208,7 @@ form input::placeholder {
   background-color: #0e0f7c;
   border-radius: 50%;
   padding: 10px;
- justify-content: space-around;
+  justify-content: space-around;
   color: #ff4878;
 }
 
@@ -214,5 +251,58 @@ form input::placeholder {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+@media (max-width: 1470px) {
+  .row4 .title {
+    font-size: 22px;
+  }
+
+.row4 {
+  align-items: center;
+}
+  .row4 nav li a{
+    font-size: 14px !important;
+    padding: 5px !important;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .row4 {
+    display: none;
+  }
+
+.collapsible {
+  display: flex;
+}
+  .row {
+  background-color: white;
+   align-items: center;
+  height: 7vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+  color: #0986b2;
+  border-bottom: 1px solid;
+  }
+
+.collapsible .title {
+  color: #6f36bb;
+  font-weight: bold;
+  font-size: 26px;
+  margin-left: 5px;
+ 
+}
+  .collapsible .col-sm-4 .fa-bars {
+    font-size: 30px;
+    margin: 10px 0 0 50px;
+    color: #6f36bb;
+  }
+}
+
+@media only screen and (min-width: 600px) {
 }
 </style>
