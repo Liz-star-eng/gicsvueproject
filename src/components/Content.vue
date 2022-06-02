@@ -183,7 +183,13 @@
 }
 .carousel-inner {
   width: 100%;
-  border-radius: 20px;
+  overflow: hidden;
+  height: 500px;
+}
+.carousel-inner img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .top-cards {

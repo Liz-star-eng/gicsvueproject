@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import MentorsView from '../views/MentorsView.vue'
+import DirectoryListing from '../views/DirectoryListing.vue'
 import StudentsView from "../views/StudentsView.vue";
 import UpcomingEvent from "../views/UpcomingEvent.vue"
 import MoCs from "../views/MoCs.vue";
+import DirectoryDetail from "../views/DirectoryDetail.vue";
+import CyberView from "../views/CyberView.vue";
 import Test from "../views/Test.vue"
 
 
@@ -15,9 +17,9 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/MentorsViews",
+    path: "/directorylistings",
     name: "mentors",
-    component: MentorsView,
+    component: DirectoryListing,
   },
   {
     path: "/StudentsViews",
@@ -33,6 +35,16 @@ const routes = [
     path: "/moccorner",
     name: "MoCs",
     component: MoCs,
+  },
+  {
+    path: "/directorydetail",
+    name: "directory",
+    component: DirectoryDetail,
+  },
+  {
+    path: "/cyberview",
+    name: "cybersecurity",
+    component: CyberView,
   },
   {
     path: "/Test",

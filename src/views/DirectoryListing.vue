@@ -5,23 +5,47 @@
       <p style="margin-left: 70px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam minima qui odio, rem officia dolorum accusamus aut vel dicta esse.</p>
       <div class="cards">
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
           <div class="container">
-            <h4><b>Jane Doe</b></h4>
+            <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <p>Interior Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/ladys.webp" alt="Avatar" style="width: 100%" />
+          <div class="container">
+          <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
           <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
           <div class="container">
-            <h4><b>Jane Doe</b></h4>
+              <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <p>Interior Designer</p>
+          </div>
+        </div>
+      </div>
+      <hr class="hr" />
+      <div class="cards">
+        <div class="card">
+          <img src="../assets/lady.jpg" alt="Avatar" style="width: 100%" />
+          <div class="container">
+             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
           <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
           <div class="container">
-            <h4><b>Jane Doe</b></h4>
+              <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <p>Interior Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
+          <div class="container">
+               <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
             <p>Interior Designer</p>
           </div>
         </div>
@@ -31,45 +55,21 @@
         <div class="card">
           <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
           <div class="container">
-            <h4><b>Jane Doe</b></h4>
+             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <p>Interior Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
+          <div class="container">
+             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
           <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
           <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
-          <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
-          </div>
-        </div>
-      </div>
-      <hr class="hr" />
-      <div class="cards">
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
-          <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
-          <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
-          <div class="container">
-            <h4><b>Jane Doe</b></h4>
+             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
             <p>Interior Designer</p>
           </div>
         </div>
@@ -116,12 +116,14 @@
 .card {
   width: 15%;
   height: 100%;
+  overflow: hidden;
 }
 
 .card img {
-  width: 150px;
   height: 200px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 .card h4 {
   color: green;
@@ -163,4 +165,16 @@
   transition: 0.1s;
 }
 
+.row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 0 5px 0;
+}
+
+.links img {
+  height: 50px;
+  object-fit: cover;
+  width: auto;
+}
 </style>

@@ -15,7 +15,7 @@
                 <i class="fa fa-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <router-link id="a" to="./MentorsViews">Mentors</router-link>
+                <router-link id="a" to="./directorylistings">Mentors</router-link>
                 <router-link id="a" to="./StudentsViews">Students</router-link>
               </div>
             </li>
@@ -38,7 +38,7 @@
                 <i class="fa fa-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <a id="a" href="advert detils.html">CyberSecurity</a>
+                <router-link id="a" to="/cyberview">CyberSecurity</router-link>
                 <a id="a" href="#">Programming</a>
                 <a id="a" href="Careers.html">Trends in Tech</a>
                 <a id="a" href="advert detils.html">Basic computing </a>
