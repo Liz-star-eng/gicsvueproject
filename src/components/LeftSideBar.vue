@@ -1,19 +1,19 @@
 <template>
      <div class="sidebar">
       <div class="leftbar">
-        <a href="#"
+        <a class="link" href="#"
           >Basic High School<i
             class="fa fa-angle-right"
             style="font-size: 24px; margin-left: 20px"
           ></i>
         </a>
-        <a href="#"
+        <a  class="link" href="#"
           >Tertiary<i
             class="fa fa-angle-right"
             style="font-size: 24px; margin-left: 90px"
           ></i
         ></a>
-        <a href="#"
+        <a  class="link" href="#"
           >Start Up<i
             class="fa fa-angle-right"
             style="font-size: 24px; margin-left: 85px"
@@ -27,6 +27,11 @@
           </a
         >
       </div>
+    </div>
+
+    <!-- media queries -->
+    <div class="media-queries">
+      <span>Click here to show left sidebar</span>
     </div>
 </template>
 
@@ -42,24 +47,21 @@
   top: 0;
 }
 
-.sidebar a {
+.sidebar .link {
   display: block;
   color: white;
   padding: 16px 10px;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
-.sidebar a:hover {
+.sidebar .link:hover {
   color: rgb(214, 214, 75);
-  margin-left: 30px;
+  margin-left: 60px !important;
   transition: 0.4s;
   cursor: pointer;
 }
 
-.sidebar .a:hover {
-  margin-left: 0 !important;
-}
 .leftbar {
   margin-top: 10vh;
 }
@@ -78,13 +80,42 @@
   margin-top: 5%;
 }
 
-.sidebar a:hover {
-  margin-left: 0 !important;
-}
-
 div .content {
   padding: 1px 16px;
   height: 1000px;
+}
+
+.text {
+  margin-left: 40px;
+}
+
+.text:hover {
+  text-decoration: none;
+  color: rgb(214, 214, 75);
+  cursor: pointer;
+}
+
+
+
+.media-queries {
+  display: none;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1240px ){
+  .sidebar .link {
+    margin-left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1033px ) {
+   .sidebar {
+      display: none;
+   }
+   .media-queries {
+     display: block;
+   }
 }
 
 </style>

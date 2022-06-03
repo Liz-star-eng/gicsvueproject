@@ -71,55 +71,144 @@
         </nav>
       </div>
       <div class="col-sm-4 search">
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="What's on your mind?"
-              name="search"
-            />
-          </div>
+        <form
+          class="searchbar"
+          action="/action_page.php"
+          style="margin: auto; max-width: 300px"
+        >
+          <input type="text" placeholder="Search.." name="search2" />
+          <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <div class="search-icon">
-          <i class="fa fa-search"></i>
-        </div>
       </div>
     </div>
   </nav>
 
   <!-- media queries -->
-  <div class="collapsible">
+  <div class="collapsible" v-if="shownav">
     <nav>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
+          <div><i class="fa fa-bars" @click="shownav = !shownav"></i></div>
           <router-link to="/"
             ><h4 class="title"><i>GirlsInICT</i><i class="fa fa-home"></i></h4
           ></router-link>
         </div>
-        <div class="col-sm-4">
-          <div><i class="fa fa-bars"></i></div>
-         
+        <div class="col-sm-2">
+          <!-- <div><i class="fa fa-bars"></i></div> -->
         </div>
         <div class="col-sm-4 search">
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="What's on your mind?"
-                name="search"
-              />
-            </div>
+          <form
+            class="searchbar"
+            action="/action_page.php"
+            style="margin: auto; max-width: 300px"
+          >
+            <input type="text" placeholder="Search.." name="search2" />
+            <button type="submit"><i class="fa fa-search"></i></button>
           </form>
-          <div class="search-icon">
-            <i class="fa fa-search"></i>
-          </div>
         </div>
       </div>
     </nav>
   </div>
+  <!-- hidden navbar -->
+  <div class="nav">
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="" class="dropbtn"
+            ><i class="fa fa-folder-open-o"></i> Directory
+            <i class="fa fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <router-link id="a" to="./directorylistings">Mentors</router-link>
+            <router-link id="a" to="./StudentsViews">Students</router-link>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="forum.html" class="dropbtn"
+            ><i class="fa fa-comment-o"></i> Forum
+            <i class="fa fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a id="a" href="">Industry</a>
+            <a id="a" href="advert detils.html">Profession</a>
+            <router-link id="a" to="./StudentsViews">Schools</router-link>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="market.html" class="dropbtn"
+            ><i class="fa fa-shopping-basket"></i> Academy
+            <i class="fa fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <router-link id="a" to="/cyberview">CyberSecurity</router-link>
+            <a id="a" href="#">Programming</a>
+            <a id="a" href="Careers.html">Trends in Tech</a>
+            <a id="a" href="advert detils.html">Basic computing </a>
+            <a id="a" href="#">IoT</a>
+            <a id="a" href="#">Robotics</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropbtn"
+            ><i class="fa fa-folder-o"></i> Events
+            <i class="fa fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <router-link id="a" to="/upcomingevent">Upcoming</router-link>
+            <a id="a" href="news.html">Past</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn"
+            ><i class="fa fa-folder-o"></i> Information Hub
+            <i class="fa fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <router-link id="a" to="/moccorner">MoCD's Corner</router-link>
+          </div>
+        </li>
+        <li @click="shownav = !shownav">
+          <a href=""><i class="fa fa-times"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="phone" v-if="shownav">
+      <nav>
+        <div class="row">
+          <div class="col-sm-6">
+            <div><i class="fa fa-bars" @click="shownav = !shownav"></i></div>
+            <router-link to="/"
+              ><h4 class="title"><i>GirlsInICT</i><i class="fa fa-home"></i></h4
+            ></router-link>
+          </div>
+          <div class="col-sm-6 search">
+            <div class="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      shownav: true,
+    };
+  },
+
+  // methods: {
+  //   togglenav() {
+  //     shownav = !shownav
+  //   }
+  // }
+};
+</script>
 
 <style scoped>
 .row4 .title {
@@ -142,7 +231,7 @@
 
 .row4 {
   background-color: white;
-  height: 9vh;
+  height: 7vh;
   display: flex;
   flex-wrap: nowrap;
   position: fixed;
@@ -189,13 +278,33 @@ li a:hover {
   display: flex;
   flex-wrap: nowrap;
 }
-
-.search .form-control {
-  width: 25vw;
+form {
+  display: flex;
+  align-items: center;
 }
 
-.navbar-form {
-  padding-right: 1px;
+form input {
+  font-size: 17px;
+  border: 1px solid grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  float: right;
+  width: 80%;
+  height: 30px;
+  background: #f1f1f1;
+}
+
+form button {
+  width: 20%;
+  height: 32px;
+  background-color: #0e0f7c;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+form button:hover {
+  background-color: #06099e;
+  transition: 0.3s ease;
 }
 
 form input::placeholder {
@@ -204,10 +313,8 @@ form input::placeholder {
   text-align: center;
 }
 .search .fa-search {
-  margin: 8px 10px 20px 0px;
-  background-color: #0e0f7c;
-  border-radius: 50%;
-  padding: 10px;
+  margin: 5px 10px 0 10px;
+  padding: 0 0 10px 0;
   justify-content: space-around;
   color: #ff4878;
 }
@@ -252,57 +359,128 @@ form input::placeholder {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.phone {
+  display: none;
+}
+
+.nav {
+  display: none;
+}
+
 @media (max-width: 1470px) {
   .row4 .title {
     font-size: 22px;
   }
 
-.row4 {
-  align-items: center;
-}
-  .row4 nav li a{
+  .row4 {
+    align-items: center;
+  }
+  .row4 nav li a {
     font-size: 14px !important;
     padding: 5px !important;
   }
-
+  .phone {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 1120px) {
   .row4 {
     display: none;
   }
 
-.collapsible {
-  display: flex;
-}
+  .collapsible {
+    display: flex;
+  }
   .row {
-  background-color: white;
-   align-items: center;
-  height: 7vh;
-  display: flex;
-  flex-wrap: wrap;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 2;
-  color: #0986b2;
-  border-bottom: 1px solid;
+    background-color: white;
+    align-items: center;
+    height: 8vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+    color: #0986b2;
+    border-bottom: 1px solid;
+  }
+  .collapsible .col-sm-6 {
+    display: flex;
   }
 
-.collapsible .title {
-  color: #6f36bb;
-  font-weight: bold;
-  font-size: 26px;
-  margin-left: 5px;
- 
-}
-  .collapsible .col-sm-4 .fa-bars {
+  .collapsible .title {
+    color: #6f36bb;
+    font-weight: bold;
+    font-size: 26px;
+    margin-left: 5px;
+  }
+  .collapsible .col-sm-6 .fa-bars {
     font-size: 30px;
-    margin: 10px 0 0 50px;
+    margin: 10px 20px 0 50px;
     color: #6f36bb;
   }
+  .nav {
+    display: flex;
+    z-index: 2;
+  }
+
+  nav ul li a {
+    font-size: 16px !important;
+  }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 750px) {
+  nav ul li a {
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .collapsible {
+    display: none;
+  }
+
+  .phone .row {
+    background-color: white;
+    align-items: center;
+    height: 8vh;
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+  
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+    color: #0986b2;
+    border-bottom: 1px solid;
+  }
+  .phone .title {
+    color: #6f36bb;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: auto;
+  }
+
+  .phone .col-sm-6 {
+    display: flex;
+  }
+
+  .phone .col-sm-6 .fa-bars {
+       font-size: 22px;
+    margin: 10px 20px 0 50px;
+    color: #6f36bb;
+  }
+
+  .phone {
+    display: flex;
+  }
+
+  .search button {
+    background-color: #0e0f7c;
+    border-radius: 10px;
+    margin-left: 100px;
+  }
 }
 </style>

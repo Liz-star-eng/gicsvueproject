@@ -344,4 +344,10 @@ h6 {
   height: 50px;
   width: 300px;
 }
+
+@media only screen and (max-width: 1033px )  {
+  .main-body {
+    margin: 10px;
+  }
+}
 </style>
