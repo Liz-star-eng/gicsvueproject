@@ -201,12 +201,7 @@ export default {
       shownav: true,
     };
   },
-
-  // methods: {
-  //   togglenav() {
-  //     shownav = !shownav
-  //   }
-  // }
+  
 };
 </script>
 
