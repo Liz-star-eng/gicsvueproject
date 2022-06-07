@@ -175,6 +175,7 @@
       </ul>
     </nav>
   </div>
+  <!-- phone query -->
   <div class="phone" v-if="shownav">
       <nav>
         <div class="row">
@@ -186,7 +187,10 @@
           </div>
           <div class="col-sm-6 search">
             <div class="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
+              <button @click="showbar = !showbar" type="submit"><i class="fa fa-search"></i></button>
+              <div class="input">
+                <input v-if="showbar" type="text" placeholder="Search.." name="search2" />
+            </div>
             </div>
           </div>
         </div>
@@ -199,6 +203,7 @@ export default {
   data() {
     return {
       shownav: true,
+      showbar: false,
     };
   },
   
@@ -232,7 +237,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 99;
   color: #0986b2;
 }
 
@@ -397,7 +402,7 @@ form input::placeholder {
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: 9;
     color: #0986b2;
     border-bottom: 1px solid;
   }
@@ -413,12 +418,14 @@ form input::placeholder {
   }
   .collapsible .col-sm-6 .fa-bars {
     font-size: 30px;
-    margin: 10px 20px 0 50px;
+    margin: 5px 20px 0 30px;
     color: #6f36bb;
+    border: 1px solid rgb(199, 191, 191);
+    padding: 5px;
   }
   .nav {
     display: flex;
-    z-index: 2;
+    z-index: 9;
   }
 
   nav ul li a {
@@ -444,7 +451,7 @@ form input::placeholder {
     display: flex;
     flex-wrap: nowrap;
     position: fixed;
-  
+    z-index: 5;
     top: 0;
     width: 100vw;
     z-index: 2;
@@ -454,7 +461,7 @@ form input::placeholder {
   .phone .title {
     color: #6f36bb;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: auto;
   }
 
@@ -463,9 +470,11 @@ form input::placeholder {
   }
 
   .phone .col-sm-6 .fa-bars {
-       font-size: 22px;
-    margin: 10px 20px 0 50px;
+    font-size: 22px;
+    margin: 5px 10px 0 10px;
     color: #6f36bb;
+    border: 1px solid rgb(199, 191, 191);
+    padding: 5px;
   }
 
   .phone {
@@ -478,4 +487,14 @@ form input::placeholder {
     margin-left: 100px;
   }
 }
+
+@media only screen and (max-width: 414px) {
+.phone .row {
+    height: 12vh;
+}
+.search {
+  display: block;
+}
+}
+
 </style>

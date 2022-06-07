@@ -6,7 +6,9 @@ import UpcomingEvent from "../views/UpcomingEvent.vue"
 import MoCs from "../views/MoCs.vue";
 import DirectoryDetail from "../views/DirectoryDetail.vue";
 import CyberView from "../views/CyberView.vue";
+import Form from "../views/Form.vue";
 import Test from "../views/Test.vue"
+
 
 
 
@@ -45,6 +47,11 @@ const routes = [
     path: "/cyberview",
     name: "cybersecurity",
     component: CyberView,
+  },
+  {
+    path: "/form",
+    name: "form",
+    component: Form,
   },
   {
     path: "/Test",

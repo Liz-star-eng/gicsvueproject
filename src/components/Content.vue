@@ -1,15 +1,5 @@
 <template>
   <div id="main-body" class="main-body" onclick="collapsible()">
-    <!-- breadcrumbs -->
-    <div>
-      <div class="right-sidebar" onclick="">
-        <i
-          >show Right Sidebar
-          <i class="fa fa-angle-right" style="font-size: 24px"
-            ><i class="fa fa-angle-right" style="font-size: 24px"></i> </i
-        ></i>
-      </div>
-    </div>
 
     <!-- carousel -->
     <div class="container-fluid">
@@ -184,7 +174,7 @@
 .carousel-inner {
   width: 100%;
   overflow: hidden;
-  height: 500px;
+  height: 45vh;
 }
 .carousel-inner img {
   width: 100%;
@@ -202,10 +192,9 @@
 .top-card {
   margin: 0 20px;
   width: 25%;
-  height: 300px;
   background-color: #6f36bb;
   color: white !important;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
   border-radius: 5px;
   text-align: center;
 }
@@ -222,10 +211,11 @@
 }
 
 .empower {
-  height: 500px;
+  height: 400px;
   background-color: #ff4878;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   color: white;
   margin: 100px 0;
@@ -244,7 +234,7 @@
   color: white;
 }
 .empower img {
-  height: 400px;
+  height: 300px;
   width: 500px;
   margin: 50px 0 0 0;
   border-top-left-radius: 50px;
@@ -347,7 +337,68 @@ h6 {
 
 @media only screen and (max-width: 1033px )  {
   .main-body {
-    margin: 10px;
+    margin: 50px 20px 0 20px;
   }
+
+  .carousel-inner {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .top-card {
+    width: 20vw !important;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+
+  .top-cards i {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+/* empower */
+
+.empower .left {
+  padding: 0 !important;
+  margin: 0;
+}
+.empower img {
+  height: 70%;
+  width: 40%;
+  margin-left: 10px;
+}
+}
+
+@media only screen and (max-width: 600px) {
+ .carousel-inner {
+    height: 15vh;
+  }
+   .top-card {
+    width: 25vw !important;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+
+.empower .left {
+  padding: 0 !important;
+  
+}
+
+.row-2 .col-sm-4 {
+  width: 100%;
+  height: 100%;
+}
+
+.row-2 .speciality-card {
+    width: 100% !important;
+   height: 100%;
+}
+
+.speciality-card img{
+  width: 100%;
+  height: 100%;
+}
+
 }
 </style>

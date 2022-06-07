@@ -31,10 +31,60 @@
 
     <!-- media queries -->
     <div class="media-queries">
-      <span>Click here to show left sidebar</span>
+      <span @click="toggleSideBar()">Click here to show left sidebar</span>
     </div>
+
+     <div v-if="openSidebar" class="sidebar-collapsible">
+      <div class="leftbar">
+        <a class="link" href="#"
+          >Basic High School<i
+            class="fa fa-angle-right"
+            style="font-size: 24px; margin-left: 20px"
+          ></i>
+        </a>
+        <a  class="link" href="#"
+          >Tertiary<i
+            class="fa fa-angle-right"
+            style="font-size: 24px; margin-left: 90px"
+          ></i
+        ></a>
+        <a  class="link" href="#"
+          >Start Up<i
+            class="fa fa-angle-right"
+            style="font-size: 24px; margin-left: 85px"
+          ></i
+        ></a>
+        <br />
+        <h4><i class="fa fa-user"></i> About Us</h4>
+        <router-link class="text" style="color: white;" to="./form"
+          ><i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+        </router-link
+        >
+      </div>
+           <router-view />
+    </div>
+ 
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      openSidebar: false,
+    }
+  },
+  methods: {
+    toggleSideBar() {
+
+      if (openSidebar){
+         document.getElementById("main-body").style.width = "17%";
+        document.getElementById("span").innerHTML = "Click here to close sidebar >>> ";
+      }
+    }
+  }
+}
+</script>
 <style scoped>
 .sidebar {
   padding: 0;
@@ -103,9 +153,17 @@ div .content {
 
 /* media queries */
 
-@media only screen and (max-width: 1240px ){
+@media only screen and (max-width: 1280px ){
   .sidebar .link {
     margin-left: 0 !important;
+  }
+
+  .sidebar a.link:first-child {
+    margin-top: 7vh !important;
+  }
+
+  .sidebar {
+    margin-top: 8vh;
   }
 }
 
@@ -115,6 +173,14 @@ div .content {
    }
    .media-queries {
      display: block;
+     margin-top: 4vh;
+     cursor: pointer;
+   }
+
+   .sidebar-collapsible {
+     display: block;
+      width: 16%;
+     background-color: rgba(111, 54, 187, );
    }
 }
 
