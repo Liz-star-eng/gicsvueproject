@@ -142,8 +142,6 @@
       </div>
     </div>
 
-    <br /><br />
-
     <div class="mt-5 mb-5">
       <h3 style="text-align: center" class="mt-5 mb-5">Our Partners</h3>
       <div class="row-2 links">

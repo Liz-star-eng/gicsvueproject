@@ -6,6 +6,9 @@ import UpcomingEvent from "../views/UpcomingEvent.vue"
 import MoCs from "../views/MoCs.vue";
 import DirectoryDetail from "../views/DirectoryDetail.vue";
 import CyberView from "../views/CyberView.vue";
+import Careers from "../views/Careers.vue";
+import NewsViews from "../views/NewsViews.vue";
+import NewsDetails from "../views/NewsDetails.vue";
 import Form from "../views/Form.vue";
 import Test from "../views/Test.vue"
 
@@ -52,6 +55,21 @@ const routes = [
     path: "/form",
     name: "form",
     component: Form,
+  },
+  {
+    path: "/careers",
+    name: "careers",
+    component: Careers,
+  },
+  {
+    path: "/newsviews",
+    name: "news",
+    component: NewsViews,
+  },
+  {
+    path: "/newsdetails",
+    name: "newsdetails",
+    component: NewsDetails,
   },
   {
     path: "/Test",

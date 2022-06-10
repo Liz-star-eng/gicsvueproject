@@ -63,7 +63,7 @@
         <div><img src="../assets/Girls-in-ICT-Day.jpg" alt="" /></div>
         <div>
           <h4>
-            Splunk 101 Hands-on Workshop <br />
+            Splunk 101 Hands-on Workshop <br>
             -infosec Basics
           </h4>
           <p>
@@ -74,7 +74,7 @@
             earum impedit in consequatur excepturi non cupiditate blanditiis ut
             corrupti commodi distinctio. Fugit, suscipit ut!
           </p>
-          <br />
+          <br>
           <div class="symbol">
             <p class="symbol-text">
               <i class="fa fa-clock-o"></i> text goes here

@@ -11,7 +11,7 @@
         <img src="../assets/min.jpg" alt="" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam
-          id in nihil deleniti! Eaque, doloribus. <br /><br />
+          id in nihil deleniti! Eaque, doloribus. <br><br>
           Inventore earum unde veritatis qui dicta reprehenderit, modi molestiae
           perspiciatis, id eveniet ducimus delectus, ratione aperiam architecto
           quaerat ex nesciunt expedita possimus cum libero! Perspiciatis
@@ -19,13 +19,13 @@
           veniam sit ea reiciendis nulla maxime tenetur optio? Perferendis
           delectus odio ad ex facilis quaerat eos illum fugit, aspernatur
           veritatis porro adipisci similique dolorum iste nihil assumenda quam
-          cumque obcaecati at consectetur et. <br /><br />
+          cumque obcaecati at consectetur et. <br><br>
           Dolores nostrum exercitationem aut tempora a, odio voluptates!
           Consectetur nesciunt molestiae sequi exercitationem repudiandae quos
           odit, reprehenderit animi? Tempora tenetur nisi sunt, repellendus
           minima voluptates dolore eveniet maiores animi labore. Aliquid
           corrupti deserunt velit mollitia blanditiis illo, eligendi deleniti
-          ipsum. Sit, fugit. <br /><br />
+          ipsum. Sit, fugit. <br><br>
           Nulla cum natus consequuntur ipsum unde libero aperiam reiciendis
           sequi numquam omnis nemo itaque dicta veritatis deserunt, a voluptas
           maxime ea expedita vel reprehenderit magnam.
@@ -33,7 +33,7 @@
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam id
-        in nihil deleniti! Eaque, doloribus. <br /><br />
+        in nihil deleniti! Eaque, doloribus. <br><br>
         Inventore earum unde veritatis qui dicta reprehenderit, modi molestiae
         perspiciatis, id eveniet ducimus delectus, ratione aperiam architecto
         quaerat ex nesciunt expedita possimus cum libero! Perspiciatis delectus,
@@ -41,13 +41,13 @@
         reiciendis nulla maxime tenetur optio? Perferendis delectus odio ad ex
         facilis quaerat eos illum fugit, aspernatur veritatis porro adipisci
         similique dolorum iste nihil assumenda quam cumque obcaecati at
-        consectetur et. <br /><br />
+        consectetur et. <br><br>
         Dolores nostrum exercitationem aut tempora a, odio voluptates!
         Consectetur nesciunt molestiae sequi exercitationem repudiandae quos
         odit, reprehenderit animi? Tempora tenetur nisi sunt, repellendus minima
         voluptates dolore eveniet maiores animi labore. Aliquid corrupti
         deserunt velit mollitia blanditiis illo, eligendi deleniti ipsum. Sit,
-        fugit. <br /><br />
+        fugit. <br><br>
         Nulla cum natus consequuntur ipsum unde libero aperiam reiciendis sequi
         numquam omnis nemo itaque dicta veritatis deserunt, a voluptas maxime ea
         expedita vel reprehenderit magnam.

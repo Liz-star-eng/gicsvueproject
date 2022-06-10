@@ -42,7 +42,7 @@
               <div class="dropdown-content">
                 <router-link id="a" to="/cyberview">CyberSecurity</router-link>
                 <a id="a" href="#">Programming</a>
-                <a id="a" href="Careers.html">Trends in Tech</a>
+                <routerLink id="a" to="./Careers">Trends in Tech</routerLink>
                 <a id="a" href="advert detils.html">Basic computing </a>
                 <a id="a" href="#">IoT</a>
                 <a id="a" href="#">Robotics</a>
@@ -55,7 +55,7 @@
               ></a>
               <div class="dropdown-content">
                 <router-link id="a" to="/upcomingevent">Upcoming</router-link>
-                <a id="a" href="news.html">Past</a>
+                <router-link id="a" to="./newsviews">Past</router-link>
               </div>
             </li>
             <li class="dropdown">
@@ -131,8 +131,8 @@
           ></a>
           <div class="dropdown-content">
             <a id="a" href="">Industry</a>
-            <a id="a" href="advert detils.html">Profession</a>
-            <router-link id="a" to="./StudentsViews">Schools</router-link>
+            <a id="a" href="./careers">Profession</a>
+            <router-link id="a" to="./careers">Schools</router-link>
           </div>
         </li>
 
@@ -267,8 +267,8 @@ nav li a {
 }
 
 li a:hover {
-  color: orangered;
-  background-color: white !important;
+  color: rgb(241, 85, 28);
+  /* background-color: white !important; */
   border-radius: 10px;
   /* height: 5vh; */
   margin: 10px;
@@ -352,9 +352,10 @@ form input::placeholder {
   text-align: left;
 }
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background-color: #ddd;
-}
+  color: orangered;
+} */
 
 .dropdown:hover .dropdown-content {
   display: block;

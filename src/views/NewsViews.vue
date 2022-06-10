@@ -3,7 +3,7 @@
     <!-- <span class="right-sidebar" id="span" onclick="openNav()"
              ><i>show Right Sidebar <<< </i></span
                  > -->
-    <h2>Careers in ICT</h2>
+    <h2>News</h2>
 
     <div class="grid-container cards">
       <div class="card">
@@ -19,7 +19,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <router-link to="./carrer" class="btn btn-primary">See Profile</router-link>
+          <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -35,7 +35,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+          <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -51,7 +51,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+           <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -67,7 +67,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+           <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -83,7 +83,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+           <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -99,7 +99,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+           <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -115,7 +115,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+          <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -131,7 +131,7 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-          <router-link to="./careers" class="btn btn-primary">See Profile</router-link>
+          <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
       <div class="card">
@@ -147,11 +147,11 @@
             Some example text some example text. John Doe is an architect and
             engineer
           </p>
-         <router-link to="./careers" class="btn btn-primary">See Profile</router-link>
+         <router-link to="./newsdetails" class="link">See Profile</router-link>
         </div>
       </div>
     </div>
-    <hr />
+    <hr>
     <div class="navigation">
       <a href="">Previous</a>
       <a href="">1</a>
@@ -161,7 +161,7 @@
       <a href="">5</a>
       <a href="">Next</a>
     </div>
-    <hr />
+    <hr>
   </div>
 </template>
 
@@ -197,9 +197,8 @@
   transition: 0.3s;
 }
 
-.cards .card .btn {
-  background-image: linear-gradient(to right, rgb(9, 73, 9), rgb(94, 104, 9));
-  color: rgb(255, 255, 255);
+.link{
+color: orangered;
 }
 
 .cards .card h4,
@@ -208,9 +207,6 @@
   margin-left: 0;
 }
 
-.cards .card .btn:hover {
-  background-image: linear-gradient(to right, rgb(176, 194, 19), green);
-}
 
 .navigation {
   justify-content: space-around;
