@@ -1,27 +1,36 @@
 <template>
   <div class="main-body">
-    <div>
+    <div class="sub-body">
       <h2>Directory</h2>
-      <p style="margin-left: 70px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam minima qui odio, rem officia dolorum accusamus aut vel dicta esse.</p>
+      <p style="margin-left: 70px">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam minima
+        qui odio, rem officia dolorum accusamus aut vel dicta esse.
+      </p>
       <div class="cards">
         <div class="card">
-          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
+          <img src="../assets/office.png" alt="Avatar" />
           <div class="container">
-            <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ladys.webp" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ladys.webp" alt="Avatar" />
           <div class="container">
-          <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ursla.jpg" alt="Avatar" />
           <div class="container">
-              <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
@@ -29,23 +38,29 @@
       <hr class="hr" />
       <div class="cards">
         <div class="card">
-          <img src="../assets/lady.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/lady.jpg" alt="Avatar" />
           <div class="container">
-             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ursla.jpg" alt="Avatar" />
           <div class="container">
-              <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
+          <img src="../assets/office.png" alt="Avatar" />
           <div class="container">
-               <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
@@ -53,23 +68,29 @@
       <hr class="hr" />
       <div class="cards">
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ursla.jpg" alt="Avatar"/>
           <div class="container">
-             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/office.png" alt="Avatar" style="width: 100%" />
+          <img src="../assets/office.png" alt="Avatar" />
           <div class="container">
-             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ursla.jpg" alt="Avatar" />
           <div class="container">
-             <router-link to="/directorydetail"><h4><b>Jane Doe</b></h4></router-link>
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
             <p>Interior Designer</p>
           </div>
         </div>
@@ -108,18 +129,20 @@
   margin-top: 10vh;
   overflow: hidden;
 }
-
+.sub-body  {
+  padding: 0 3rem;
+}
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
 }
 .card {
-  width: 15%;
   height: 100%;
   overflow: hidden;
 }
 
 .card img {
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
@@ -147,21 +170,20 @@
 .jumbotron {
   display: flex;
   justify-content: center;
-  background-color: #ff4878;
+  flex-wrap: wrap;
+  background-color: #A2D5AC;
 }
 .partners button {
   margin-left: 20px;
-  height: 6vh;
   border-radius: 10px;
   color: white;
-  background-image: linear-gradient(90deg, #5b0422, #9f083c);
+  background-color: #479595;
   padding: 10px;
-  width: 15vw;
 }
 
 .partners button:hover {
   padding: 5px;
-  color: rgb(231, 165, 176);
+  color: black;
   transition: 0.1s;
 }
 
@@ -177,4 +199,27 @@
   object-fit: cover;
   width: auto;
 }
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+  .card .container {
+  text-align: center;
+}
+
+}
+/* 
+@media only screen and (max-width: 600) {
+  .main-body {
+    overflow-x: none !important;
+  }
+  .card .container {
+    text-align: center;
+  }
+} */
 </style>

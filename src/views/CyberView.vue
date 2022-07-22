@@ -2,7 +2,7 @@
   <div class="main-body">
     <h2>Cyber security</h2>
     <div class="image">
-      <img src="../assets/cybersecurity.jpg" alt="" />
+      <img src="../assets/cyber.jpg" alt="" />
     </div>
     <div class="button">
       <button class="active">Overview</button>
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" style="width: 100%" />
+          <img src="../assets/ursla.jpg" alt="Avatar"/>
           <div class="container">
              <div class="card-body">
           <h4 class="card-title">John Doe</h4>
@@ -130,9 +130,11 @@
 img {
   object-fit: cover;
   object-position: center;
-  width: 100%;
+  width: 70%;
+  margin-left: 15rem;
   overflow: hidden;
   height: 500px;
+  border-radius: 10px;
 }
 .button {
   display: flex;
@@ -147,12 +149,12 @@ button {
 }
 
 .active {
-  background: #6f36bb;
+  background: #557C83;
   color: white;
 }
 
 button:hover {
-  background-color: #6027aa;
+  background-color: #557C83;
   color: white;
   transition: 0.3s;
 }
@@ -163,6 +165,7 @@ button:hover {
 .name {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 input {
@@ -172,38 +175,52 @@ input {
 }
 
 .btn {
-  background-image: linear-gradient(to right, rgb(94, 104, 9), rgb(9, 73, 9));
+  background-color: #557C83;
   color: rgb(255, 255, 255);
   width: 100px;
 }
 
 .btn:hover {
-  background-image: linear-gradient(to right, rgb(9, 73, 9), rgb(94, 104, 9));
+ background-color: #91cfd8;
+ color: black;
 }
 
 .cards {
   display: flex;
+  justify-content: space-between;
   align-content: center;
-  margin: 0 0 0 150px;
+  padding: 5px 0;
 }
 .card {
-  width: 300px;
-  height: 100%;
+  width: 350px;
+  padding-bottom: 3rem;
   overflow: hidden;
-  margin: 20px;
   background-color: rgb(218, 211, 211);
 }
 
 .card img {
- 
+  width: 100%;
   height: 200px;
   border-radius: 10px;
   object-fit: cover;
   object-position: center;
+  margin: 0;
 }
 
 .arrow {
     font-size: 24px;
     margin: 130px 0 0 0;
+}
+
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 992px)  {
+  .cards {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
 </style>

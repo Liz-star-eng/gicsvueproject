@@ -30,7 +30,7 @@
     </div>
 
     <!-- media queries -->
-    <div class="media-queries">
+    <!-- <div class="media-queries">
       <span @click="toggleSideBar()">Click here to show left sidebar</span>
     </div>
 
@@ -62,8 +62,7 @@
         </router-link
         >
       </div>
-           <router-view />
-    </div>
+    </div> -->
  
 </template>
 
@@ -74,27 +73,18 @@ export default {
       openSidebar: false,
     }
   },
-  methods: {
-    toggleSideBar() {
-
-      if (openSidebar){
-         document.getElementById("main-body").style.width = "17%";
-        document.getElementById("span").innerHTML = "Click here to close sidebar >>> ";
-      }
-    }
-  }
+ 
 }
 </script>
 <style scoped>
 .sidebar {
   padding: 0;
-  background-color: #6F36BB;
+  background-color: #557C83;
   position: fixed;
-  height: 100%;
+  height: 95%;
+  margin-top: 6%;
   overflow: auto;
   width: 16%;
-  z-index: 1;
-  top: 0;
 }
 
 .sidebar .link {
@@ -106,7 +96,7 @@ export default {
 }
 
 .sidebar .link:hover {
-  color: rgb(214, 214, 75);
+  color: #aecdd3;
   margin-left: 60px !important;
   transition: 0.4s;
   cursor: pointer;
@@ -127,7 +117,7 @@ export default {
   font-size: 16px;
   width: 100px;
   padding: 13px;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 div .content {
@@ -153,7 +143,7 @@ div .content {
 
 /* media queries */
 
-@media only screen and (max-width: 1280px ){
+@media only screen and (max-width: 1409px ){
   .sidebar .link {
     margin-left: 0 !important;
   }
@@ -163,7 +153,7 @@ div .content {
   }
 
   .sidebar {
-    margin-top: 8vh;
+    margin-top: 0;
   }
 }
 
@@ -171,17 +161,7 @@ div .content {
    .sidebar {
       display: none;
    }
-   .media-queries {
-     display: block;
-     margin-top: 4vh;
-     cursor: pointer;
-   }
 
-   .sidebar-collapsible {
-     display: block;
-      width: 16%;
-     background-color: rgba(111, 54, 187, );
-   }
 }
 
 </style>

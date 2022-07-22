@@ -137,17 +137,17 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card {
-  width: 15%;
-  height: 100%;
-  overflow: hidden;
-  margin: 30px;
+  padding-top: 3rem;
+  width: 200px;
+  /* height: 100%; */
 }
 
 .card img {
-  width: 100%;
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
@@ -170,6 +170,24 @@
 .cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    margin-left: 0;
+  }
+.row  {
+  flex-wrap: wrap;
+}
+  
+}
+
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    padding: 3rem;
+  }
+
 }
 
 </style>

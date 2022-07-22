@@ -30,18 +30,19 @@
 
 <style scoped>
 .footer {
-  background-color: #6F36BB;
-  padding: 10px;
-  padding-bottom: 0;
-  width: 100%;
-  height: 300px;
+  background-color: #557C83;
+  padding: 3rem 1rem;
+  width: 85%;
+  margin-left: 15%;
+  overflow: hidden;
+  z-index: 99;
 }
 
 .row5 {
   display: flex;
+  flex-wrap: wrap;
   color: white;
   justify-content: space-around;
-  margin-left: 10%;
 }
 
 
@@ -85,6 +86,23 @@ p {
 }
 
 .copyright {
-  margin-top: 130px;
+  padding: 5rem 0;
 }
+
+@media only screen and (max-width: 1033px ) {
+  .footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600) {
+  .row5 {
+    flex-wrap: wrap;
+  }
+  .row5 div {
+    width: 100%;
+  }
+}
+
 </style>

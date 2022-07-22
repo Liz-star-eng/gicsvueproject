@@ -1,5 +1,6 @@
 <template>
-  <div id="main-body" class="main-body" onclick="collapsible()">
+  <div id="main-body" class="main-body">
+    <!-- <RightSideNavVue /> -->
 
     <!-- carousel -->
     <div class="container-fluid">
@@ -74,26 +75,29 @@
         <h3>Empowering Girls & Women In Cyber Security</h3>
         <p style="text-align: justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. <br />Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum.
+          eiusmod tempor incididunt <br />
+          ut labore et dolore magna aliqua. <br />Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. <br />Excepteur sint occaecat cupidatat non proident, sunt
+          in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
       <img src="../assets/Girls-in-ICT-North-East.jpg" alt="" />
     </div>
-
-    <h3 style="text-align: center; margin-top: 100px">Past Events</h3>
-    <div class="row-2">
-      <div class="col-sm-4">
-        <img src="../assets/sustainable-development-strategy.jpg" alt="" />
-      </div>
-      <div class="col-sm-4">
-        <img src="../assets/Digi_Transf.png" alt="" />
-      </div>
-      <div class="col-sm-4">
-        <img src="../assets/bd.jpg" alt="" />
+    <div class="pastEvent">
+      <h3>
+        Past Events
+      </h3>
+      <div class="row-2">
+        <div class="col-sm-4">
+          <img src="../assets/sustainable-development-strategy.jpg" alt="" />
+        </div>
+        <div class="col-sm-4">
+          <img src="../assets/Digi_Transf.png" alt="" />
+        </div>
+        <div class="col-sm-4">
+          <img src="../assets/bd.jpg" alt="" />
+        </div>
       </div>
     </div>
 
@@ -144,15 +148,81 @@
 
     <div class="mt-5 mb-5">
       <h3 style="text-align: center" class="mt-5 mb-5">Our Partners</h3>
-      <div class="row-2 links">
-        <div class="col-sm-4">
-          <img src="../assets/image_2022-05-04_16-41-16.png" alt="" />
-        </div>
-        <div class="col-sm-4">
-          <img src="../assets/image_2022-05-04_16-41-57.png" alt="" />
-        </div>
-        <div class="col-sm-4">
-          <img src="../assets/image_2022-05-04_16-42-21.png" alt="" />
+      <div class="partners">
+        <div id="LogoCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#LogoCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#LogoCarousel" data-slide-to="1"></li>
+            <li data-target="#LogoCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-16.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-57.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-42-21.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="row">
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-16.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-57.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-42-21.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="row">
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-16.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-41-57.png" alt="" />
+                </div>
+                <div class="col-sm-3">
+                  <img src="../assets/image_2022-05-04_16-42-21.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a
+            class="left carousel-control"
+            href="#LogoCarousel"
+            data-slide="prev"
+          >
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#LogoCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
@@ -162,7 +232,7 @@
 <style scoped>
 .main-body {
   margin-left: 17%;
-  margin-top: 10vh;
+  margin-top: 12vh;
   overflow: hidden;
 }
 
@@ -172,7 +242,7 @@
 .carousel-inner {
   width: 100%;
   overflow: hidden;
-  height: 45vh;
+  height: 60vh;
 }
 .carousel-inner img {
   width: 100%;
@@ -184,15 +254,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 10px;
+  gap: 10px;
 }
 .top-card {
-  margin: 0 20px;
-  width: 25%;
-  background-color: #6f36bb;
+  background-color: #293139;
   color: white !important;
-  padding: 10px 10px 30px 10px;
+  padding: 5rem 10rem;
   border-radius: 5px;
   text-align: center;
 }
@@ -200,7 +269,7 @@
   color: white;
 }
 .top-card-mid {
-  background-color: #ff4878;
+  background-color: #A2D5AC;
 }
 
 .top-cards i {
@@ -209,32 +278,27 @@
 }
 
 .empower {
-  height: 400px;
-  background-color: #ff4878;
+  background-color: #A2D5AC;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: white;
   margin: 100px 0;
+  padding: 5rem 0;
+}
+.empower p,
+.empower h3 {
+  color: white;
+  line-height: 2.5;
+}
+.empower p {
+  font-size: 16px;
+  text-align: center;
 }
 
-.empower .left,
-.empower .right {
-  margin-top: 50px;
-}
-.empower .left {
-  padding: 50px;
-  width: 30%;
-}
-.empower .left h3,
-.empower .left p {
-  color: white;
-}
 .empower img {
   height: 300px;
   width: 500px;
-  margin: 50px 0 0 0;
   border-top-left-radius: 50px;
   object-fit: cover;
 }
@@ -243,10 +307,24 @@
   border-radius: 10px;
   width: 100%;
 }
+/* past events */
+.pastEvent h3 {
+text-align: center; 
+margin-top: 100px
+}
 
+.pastEvent .row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* whats our specialty card */
 .row-2 {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .speciality-card {
@@ -269,36 +347,35 @@
 
 .partner {
   padding: 20px;
-  display: grid;
-  grid-template-areas: "left right";
+  display: flex;
+  padding: 10rem 30rem;
   height: 250px;
-  background-color: #ff4878;
+  background-color: #A2D5AC;
   width: 100%;
 }
-.partner .right {
-  grid-area: right;
-  margin-top: 80px;
-  text-align: left;
-}
+
 .partner .left {
-  grid-area: left;
-  margin-top: 80px;
   font-weight: bold;
   padding: 10px 20px;
 }
 .partner .left h4 {
   font-weight: bold;
-  color: white;
+  color: black;
 }
 .partner .right button {
   padding: 10px 15px;
-  background-image: linear-gradient(90deg, #5b0422, #9f083c);
+  background-color: #4E888A;
   color: white;
   width: auto;
   height: 50px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.partner .right button:hover{
+    background-color: #b2e1e2;
+     color: black;
 }
 
 p,
@@ -333,7 +410,7 @@ h6 {
   width: 300px;
 }
 
-@media only screen and (max-width: 1033px )  {
+@media only screen and (max-width: 1033px) {
   .main-body {
     margin: 50px 20px 0 20px;
   }
@@ -343,60 +420,42 @@ h6 {
   }
 }
 
-@media only screen and (max-width: 1500px) {
-  .top-card {
-    width: 20vw !important;
-    margin: 10px;
-    flex-wrap: wrap;
-  }
-
-  .top-cards i {
-  margin-top: 30px;
-  font-size: 30px;
-}
-
-/* empower */
-
-.empower .left {
-  padding: 0 !important;
-  margin: 0;
-}
-.empower img {
-  height: 70%;
-  width: 40%;
-  margin-left: 10px;
-}
-}
-
 @media only screen and (max-width: 600px) {
- .carousel-inner {
+  .carousel-inner {
     height: 15vh;
   }
-   .top-card {
+  /* .top-card {
     width: 25vw !important;
     margin: 10px;
     flex-wrap: wrap;
+  } */
+
+  .empower {
+    padding: 20px;
   }
 
-.empower .left {
-  padding: 0 !important;
-  
-}
+  .row-2 .col-sm-4 {
+    width: 100%;
+    height: 100%;
+  }
 
-.row-2 .col-sm-4 {
-  width: 100%;
-  height: 100%;
-}
-
-.row-2 .speciality-card {
+  .row-2 .speciality-card {
     width: 100% !important;
-   height: 100%;
+    height: 100%;
+  }
 }
 
-.speciality-card img{
-  width: 100%;
-  height: 100%;
+.mt-5 .carousel-inner {
+  height: 100px;
+  padding: 10px 0;
 }
-
+.mt-5 .carousel-inner img {
+  height: 50px;
+  width: 200px;
+}
+.mt-5 .carousel-inner .row {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 0 0;
 }
 </style>

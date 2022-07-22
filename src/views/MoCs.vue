@@ -1,8 +1,5 @@
 <template>
   <div id="main-body" class="main-body">
-    <span class="right-sidebar" id="span" onclick="openNav()"
-      ><i>show Right Sidebar </i></span
-    >
 
     <div class="Moc-body">
       <h2>Minister/MoCD's Corner</h2>
@@ -56,7 +53,7 @@
 
     <div class="Jumbotron">
       <div class="row">
-        <div class="col-6" style="margin-left: 20px">
+        <div class="col-3">
           <h3>Empowering Women and Girls in ICT</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
@@ -65,7 +62,7 @@
             perferendis, recusandae iste eligendi.
           </p>
         </div>
-        <div class="col-6">
+        <div class="col-9">
           <img src="images/photo_2022-05-05_09-27-14.jpg" alt="" style="" />
         </div>
       </div>
@@ -97,7 +94,7 @@
   display: flex;
 }
 .MoC-content img {
-  width: 70%;
+  width: 40%;
   margin: 0 20px 30px 0;
   border-radius: 5px;
 }
@@ -107,32 +104,47 @@
 }
 
 .empower {
-  height: 500px;
-  background-color: #ff4878;
+  background-color: #A2D5AC;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 40% 55%;
+  margin: 100px 0;
+  padding: 5rem 10rem;
+  gap: 20px;
+}
+.empower p,
+.empower h3 {
   color: white;
-  margin: 100px 0 0 0;
+  line-height: 1.5;
+}
+.empower p {
+  font-size: 16px;
+  text-align: center;
 }
 
-.empower .left,
-.empower .right {
-  margin-top: 50px;
-}
-.empower .left {
-  padding: 50px;
-  width: 30%;
-}
-.empower .left h3,
-.empower .left p {
-  color: white;
-}
 .empower img {
-  height: 400px;
+  height: 300px;
   width: 500px;
-  margin: 50px 0 0 0;
   border-top-left-radius: 50px;
   object-fit: cover;
+}
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+   .main-body {
+    margin-left: 0;
+    padding: 10px;
+  }
+  .empower {
+      grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+.empower {
+  padding: 10px;
+}
 }
 </style>

@@ -198,8 +198,9 @@
 }
 
 .cards .card .btn {
-  background-image: linear-gradient(to right, rgb(9, 73, 9), rgb(94, 104, 9));
+  background-color: #469C9D;
   color: rgb(255, 255, 255);
+  transition: 0.3s;
 }
 
 .cards .card h4,
@@ -209,7 +210,8 @@
 }
 
 .cards .card .btn:hover {
-  background-image: linear-gradient(to right, rgb(176, 194, 19), green);
+  background-color: #b0edee;
+  color: black
 }
 
 .navigation {
@@ -226,5 +228,33 @@
 .navigation a:hover {
   background-color: #5fb9da;
   color: blue;
+}
+@media only screen and (max-width: 1033px ) {
+  .main-body {
+    margin-left: 0;
+    padding: 0 2rem;
+  }
+  .grid-container {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .grid-container{
+     grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+     grid-template-columns: 100%;
+  }
+
+ .cards {
+    padding: 0;
+    margin: 0;
+  }
+  .card {
+    padding: 0;
+  }
 }
 </style>

@@ -1,15 +1,12 @@
 <template>
   <div id="main-body" class="main-body">
-    <span class="right-sidebar" id="span" onclick="openNav()"
-      ><i>show Right Sidebar </i></span
-    >
 
     <div class="Events">
       <h3><strong>Upcoming Events</strong></h3>
       <hr />
       <div class="eventContent">
         <div><img src="../assets/Girls-in-ICT-Day.jpg" alt="" /></div>
-        <div>
+        <div class="textContent">
           <h4>
             Splunk 101 Hands-on Workshop <br />
             -infosec Basics
@@ -136,7 +133,11 @@
   display: flex;
   border-radius: 5px;
   background-color: whitesmoke;
-  margin: 20px;
+  /* margin: 20px; */
+}
+
+.eventContent .textContent{
+  padding: 3rem;
 }
 
 .eventContent img {
@@ -153,6 +154,9 @@
 
 .symbol {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 2.5rem;
 }
 
 .symbol-text {
@@ -160,10 +164,9 @@
 }
 
 .symbol button {
-  border-radius: 10px;
+  border-radius: 5px;
   color: orange;
-  height: 30px;
-  margin-left: 250px;
+  padding: 5px;
 }
 
 .symbol .fa {
@@ -172,7 +175,7 @@
 
 .empower {
   height: 500px;
-  background-color: #ff4878;
+  background-color: #A2D5AC;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -199,5 +202,15 @@
   border-top-left-radius: 50px;
   object-fit: cover;
 }
-
+@media only screen and (max-width: 1033px ){
+  .main-body {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 1200px ) {
+  .eventContent {
+    flex-wrap: wrap;
+  }
+}
+ 
 </style>
