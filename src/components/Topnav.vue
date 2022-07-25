@@ -7,7 +7,7 @@
       <nav>
         <li class="dropdown">
         <a href="" class="dropbtn"
-          ><i class="fa fa-folder-open-o"></i> Directory
+          ><i class="fa fa-address-book-o"></i> Directory
           <i class="fa fa-chevron-down"></i
         ></a>
         <div class="dropdown-content">
@@ -27,7 +27,7 @@
       </li>
       <li class="dropdown">
         <a href="" class="dropbtn"
-          ><i class="fa fa-folder-open-o"></i> Academy
+          ><i class="fa fa-graduation-cap"></i> Academy
           <i class="fa fa-chevron-down"></i
         ></a>
         <div class="dropdown-content">
@@ -41,7 +41,7 @@
       </li>
       <li class="dropdown">
         <a href="" class="dropbtn"
-          ><i class="fa fa-folder-open-o"></i> Events
+          ><i class="fa fa-fire"></i> Events
           <i class="fa fa-chevron-down"></i
         ></a>
         <div class="dropdown-content">
@@ -51,7 +51,7 @@
       </li>
       <li class="dropdown">
         <a href="" class="dropbtn"
-          ><i class="fa fa-folder-building-o"></i> Information Hub
+          ><i class="fa fa-archive"></i> Information Hub
           <i class="fa fa-chevron-down"></i
         ></a>
         <div class="dropdown-content">
@@ -66,7 +66,7 @@
     </div>
   </header>
   <!-- responsiveness -->
-  <nav class="mediaQueries">
+  <nav class="collapsibleNav">
     <div class="smallDevices">
       <router-link to="" class="title"
         >GirlsInICT <i class="fa fa-home"></i
@@ -75,7 +75,7 @@
     </div>
   </nav>
   <!-- toggle navbar -->
-  <div class="ResponsiveNav" v-if="SmallScreen">
+  <div class="ResponsiveNav" :class="collapsibleNav">
     <nav class="NavItems">
       <li class="dropdown">
         <a href="" class="dropbtn"
@@ -130,7 +130,11 @@
           <router-link to="">Cybersecurity</router-link>
         </div>
       </li>
+       <a href="" class="cta">
+      Ask for help
+    </a>
     </nav>
+  
     <div class="search-bar">
       <input type="text" placeholder="What are you looing for?" />
       <button><i class="fa fa-search"></i></button>
@@ -142,12 +146,14 @@ export default {
   data() {
     return {
       SmallScreen: false,
+      collapsibleNav: 'slideUp'
     };
   },
 
   methods: {
     toggleNav() {
       this.SmallScreen = !this.SmallScreen;
+      this.collapsibleNav = 'slidedown'
     },
   },
 };
@@ -166,21 +172,21 @@ header {
   position: fixed;
   z-index: 99;
   background-color: white;
-  padding: 3rem 0;
-  box-shadow: 4px 5px 10px rgb(221, 218, 218);
+  padding: 3rem 5rem;
+  box-shadow: 4px 5px 20px rgb(221, 218, 218);
   width: 100vw;
 }
 .navBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 90%;
+  /* max-width: 90%; */
   margin: auto;
 }
 .title {
   font-size: 30px;
   font-style: italic;
-  color: #293139;
+  color: #377D71;
   font-weight: bold;
 }
 
@@ -191,12 +197,12 @@ ul li {
 li a,
 .dropbtn {
   display: inline-block;
-  color: #293139;
+  color: #377D71;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 li a:hover, .title:hover,
 .NavItems li a:hover {
@@ -226,6 +232,14 @@ li.dropdown {
   display: block;
 }
 
+.navBar .fa-chevron-down {
+  font-size: 12px;
+}
+
+.cta {
+  background-color: #377D71;
+}
+
 input,
 button {
   height: 35px;
@@ -233,36 +247,42 @@ button {
 
 input {
   width: 250px;
-  padding: 0 2rem;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  padding: 0 2.5rem;
+  border-radius: 50px;
+  outline: #aecdd3;
 }
 
 input::placeholder {
   font-style: italic;
   font-size: 16px;
-  color: #557C83;
+  color: #377D71;
 }
 
 button {
-  width: 50px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 15px;
   border: none;
-  background-color: #557C83;
+  background-color: #377D71;
   color: white;
- 
+  margin-left: 9px;
 }
 
-.mediaQueries {
-  /* position: fixed; */
+.collapsibleNav {
   display: none;
   box-shadow: 4px 5px 10px rgb(221, 218, 218);
   background-color: white;
-  width: 100vw;
   z-index: 1;
   overflow: hidden;
+}
+
+.slideDown {
+  height: auto;
+}
+.slideUp {
+  display: none;
+  height: 0;
 }
 .smallDevices {
   display: flex;
@@ -277,7 +297,7 @@ button {
   display: block;
 }
 .NavItems li a {
-  color: #557C83;
+  color: #377D71;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -307,11 +327,11 @@ button {
   }
 }
 
-@media (max-width: 1410px) {
+@media (max-width: 1310px) {
   header {
     display: none;
   }
-  .mediaQueries {
+  .collapsibleNav {
     display: flex;
     padding: 3rem 0;
   }

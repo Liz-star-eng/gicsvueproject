@@ -57,7 +57,7 @@
     <h3 style="text-align: center; margin-top: 5%">Text Goes Here</h3>
     <div class="row top-cards mt-3 mb-5">
       <div class="top-card">
-        <i class="fa fa-heart"></i><br />
+        <img src="../assets/icon-search-heart-heart-inspiration-icon-with-png-and-vector-856151.png" alt="">
         <h4 style="text-align: center">Inspire</h4>
       </div>
       <div class="top-card top-card-mid">
@@ -65,7 +65,7 @@
         <h4 style="text-align: center">Engage</h4>
       </div>
       <div class="top-card">
-        <i class="fa fa-users"></i><br />
+       <img src="../assets/photo_2022-04-29_15-17-16.png" alt="">
         <h4 style="text-align: center">Educate</h4>
       </div>
     </div>
@@ -75,14 +75,21 @@
         <h3>Empowering Girls & Women In Cyber Security</h3>
         <p style="text-align: justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt <br />
-          ut labore et dolore magna aliqua. <br />Ut enim ad minim veniam, quis
+          eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. <br />Excepteur sint occaecat cupidatat non proident, sunt
+          consequat. Excepteur sint occaecat cupidatat non proident, sunt
+          in culpa qui officia deserunt mollit anim id est laborum.
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Excepteur sint occaecat cupidatat non proident, sunt
           in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <img src="../assets/Girls-in-ICT-North-East.jpg" alt="" />
+      <img src="../assets/photo_2022-07-25_09-11-26.jpg" alt="" />
     </div>
     <div class="pastEvent">
       <h3>
@@ -146,6 +153,8 @@
       </div>
     </div>
 
+    <!-- Our partners carousel -->
+
     <div class="mt-5 mb-5">
       <h3 style="text-align: center" class="mt-5 mb-5">Our Partners</h3>
       <div class="partners">
@@ -206,7 +215,7 @@
             </div>
           </div>
 
-          <!-- Left and right controls -->
+          <!-- Left and right controls --> 
           <a
             class="left carousel-control"
             href="#LogoCarousel"
@@ -231,9 +240,10 @@
 
 <style scoped>
 .main-body {
-  margin-left: 17%;
-  margin-top: 12vh;
+  margin-left: 15%;
+  margin-top: 17vh;
   overflow: hidden;
+  padding: 0 30px;
 }
 
 .container-fluid {
@@ -261,7 +271,7 @@
 .top-card {
   background-color: #293139;
   color: white !important;
-  padding: 5rem 10rem;
+  padding: 5rem 5rem;
   border-radius: 5px;
   text-align: center;
 }
@@ -270,6 +280,7 @@
 }
 .top-card-mid {
   background-color: #A2D5AC;
+  padding: 0 10rem;
 }
 
 .top-cards i {
@@ -284,12 +295,16 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 100px 0;
-  padding: 5rem 0;
+  padding: 5rem 20rem;
+  gap: 10px;
+}
+.empower .left, .empower .right {
+  width: 50%;
 }
 .empower p,
 .empower h3 {
-  color: white;
-  line-height: 2.5;
+  color: rgb(53, 52, 52);
+  margin-right: 20px;
 }
 .empower p {
   font-size: 16px;
@@ -297,7 +312,7 @@
 }
 
 .empower img {
-  height: 300px;
+  height: 400px;
   width: 500px;
   border-top-left-radius: 50px;
   object-fit: cover;
@@ -310,34 +325,42 @@
 /* past events */
 .pastEvent h3 {
 text-align: center; 
-margin-top: 100px
+margin: 100px auto 30px auto;
 }
 
 .pastEvent .row2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.pastEvent img {
+  /* width: 400px; */
+  object-fit: cover;
+  object-position: center;
 }
 
 /* whats our specialty card */
 .row-2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
 }
 
 .speciality-card {
+  margin-top: 30px;
   text-align: center;
-  padding: 20px;
-  width: 400px;
-  height: 500px;
+  padding: 30px 20px;
+  width: 350px;
+  
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 15px 1px lightgray;
 }
 .speciality-card img {
-  margin: 80px 0 30px 0;
+  margin: 80px 0 px 0;
   width: 200px;
   height: 200px;
   object-position: center;
@@ -348,15 +371,16 @@ margin-top: 100px
 .partner {
   padding: 20px;
   display: flex;
-  padding: 10rem 30rem;
-  height: 250px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5rem 1rem;
   background-color: #A2D5AC;
   width: 100%;
+  gap: 10px;
 }
 
 .partner .left {
   font-weight: bold;
-  padding: 10px 20px;
 }
 .partner .left h4 {
   font-weight: bold;

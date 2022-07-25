@@ -1,7 +1,7 @@
 <template>
-  <div id="mySidebar" class="sidebar" v-if="sideBarOpen">
+  <div id="mySidebar" class="sidebar" :class="rightNav">
     <h2>Women in ICT</h2>
-    <a href="javascript:void(0)" class="closebtn" @click="toggleClose()"
+    <a href="javascript:void(0)" class="closebtn" @click="closeBar()"
       ><i class="fa fa-times"></i
     ></a>
     <a href="#">
@@ -23,9 +23,9 @@
   </div>
 
   <div id="main">
-    <span class="openbtn" @click="toggleSideBar()"
-      ><i>Open Right Sidebar >>> </i></span
-    >
+    <span class="openbtn" @click="toggleSideBar()"><i><i class="fa fa-angle-double-right"></i></i>
+    <span  class="tooltiptext"> click to show Right Navbar</span>
+    </span>
   </div>
 </template>
 
@@ -33,15 +33,15 @@
 export default {
   data() {
     return {
-      sideBarOpen: false,
+      rightNav: "noSlide",
     };
   },
   methods: {
     toggleSideBar() {
-      this.sideBarOpen = !this.sideBarOpen;
+      this.rightNav = "slide";
     },
-    toggleClose() {
-      this.sideBarOpen = !this.sideBarOpen;
+    closeBar() {
+      this.rightNav = "noSlide";
     },
   },
 };
@@ -50,15 +50,21 @@ export default {
 <style scoped>
 .sidebar {
   height: 90%;
-  width: 20%;
   position: fixed;
   z-index: 1;
   top: 12vh;
   right: 0;
-  background-color: #557C83;
+  background-color: #377D71;
   overflow-x: hidden;
-  transition: width 1s ease;
+  transition: width 0.6s ease;
   padding-top: 60px;
+}
+
+.slide {
+  width: 20%;
+}
+.noSlide {
+  width: 0;
 }
 
 .sidebar a {
@@ -87,21 +93,43 @@ export default {
   margin-left: 50px;
 }
 
-span {
-  margin-top: 10rem !important;
+.openbtn {
+  background-color: #377D71;
+  margin-top: 11rem !important;
   font-size: 20px;
   cursor: pointer;
-  color: #557C83;
+  color: white;
   border: none;
-  z-index: 1;
   position: fixed;
-  padding: 5px;
-  right: 0;
-    /* margin-left: 80vw; */
+  padding: 5px 2rem;
+  right: 5rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .openbtn:hover {
   color: #444;
+}
+
+.openbtn .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #377D71;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 16px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: -100%;
+}
+
+.openbtn:hover .tooltiptext {
+   visibility: visible;
 }
 
 #mySidebar a img {
@@ -114,38 +142,10 @@ span {
   right: 0;
 }
 @media only screen and (max-width: 1409px) {
-  span {
+.openbtn {
     margin-top: 0 !important;
-  }
-   span {
     margin-left: 0;
-  padding-left: 90rem;
+    padding-left: 90rem;
   }
-}
-@media only screen and (max-width: 1250px) {
-.sidebar {
-  width: 30%;
-}
-}
-
-@media only screen and (max-width: 992px){
-  .sidebar {
-  width: 40%;
-}
-  span {
-    margin-left: 0;
-  padding-left: 60rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  span {
-    margin-left: 0;
-  padding-left: 15rem;
-  }
-    .sidebar {
-  width: 100%;
-  padding: 0 4rem;
-}
 }
 </style>

@@ -24,13 +24,13 @@
               </li>
             </div>
           </div>
-          <div class="copyright"><p><i> Copyright@GrlsinCyberSecurityGH|powered by AITI-KACE</i></p></div>
+          <div class="copyright"><p><i> Copyright @GrlsinCyberSecurityGH | powered by AITI-KACE</i></p></div>
     </div> 
 </template>
 
 <style scoped>
 .footer {
-  background-color: #557C83;
+  background-color: #377d71;
   padding: 3rem 1rem;
   width: 85%;
   margin-left: 15%;

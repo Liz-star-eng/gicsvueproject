@@ -133,7 +133,7 @@
   display: flex;
   border-radius: 5px;
   background-color: whitesmoke;
-  /* margin: 20px; */
+  margin: 20px;
 }
 
 .eventContent .textContent{

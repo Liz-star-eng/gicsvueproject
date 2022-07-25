@@ -13,7 +13,7 @@
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
+            <p>Computer Analyst</p>
           </div>
         </div>
         <div class="card">
@@ -22,16 +22,16 @@
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
+            <p>Systems Analyst</p>
           </div>
         </div>
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" />
+          <img src="../assets/lady.jpg" alt="Avatar" />
           <div class="container">
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
+            <p>Computer Application Analyst</p>
           </div>
         </div>
       </div>
@@ -43,16 +43,7 @@
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" />
-          <div class="container">
-            <router-link to="/directorydetail"
-              ><h4><b>Jane Doe</b></h4></router-link
-            >
-            <p>Interior Designer</p>
+            <p>ICT Business Analyst</p>
           </div>
         </div>
         <div class="card">
@@ -61,19 +52,37 @@
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
+            <p>UI/UX Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/lady.jpg" alt="Avatar" />
+          <div class="container">
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
+            <p>Cyber Security Expert</p>
           </div>
         </div>
       </div>
       <hr class="hr" />
       <div class="cards">
         <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar"/>
+          <img src="../assets/office.png" alt="Avatar"/>
           <div class="container">
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
+            <p>ux/ui Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/lady.jpg" alt="Avatar" />
+          <div class="container">
+            <router-link to="/directorydetail"
+              ><h4><b>Jane Doe</b></h4></router-link
+            >
+            <p>system Analysis</p>
           </div>
         </div>
         <div class="card">
@@ -82,16 +91,7 @@
             <router-link to="/directorydetail"
               ><h4><b>Jane Doe</b></h4></router-link
             >
-            <p>Interior Designer</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../assets/ursla.jpg" alt="Avatar" />
-          <div class="container">
-            <router-link to="/directorydetail"
-              ><h4><b>Jane Doe</b></h4></router-link
-            >
-            <p>Interior Designer</p>
+            <p>internet security analyst</p>
           </div>
         </div>
       </div>
@@ -109,13 +109,13 @@
     <div class="mt-5 mb-5">
       <h3 style="text-align: center" class="mt-5 mb-5">Our Partners</h3>
       <div class="row-2 links">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <img src="../assets/image_2022-05-04_16-41-16.png" alt="" />
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <img src="../assets/image_2022-05-04_16-41-57.png" alt="" />
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <img src="../assets/image_2022-05-04_16-42-21.png" alt="" />
         </div>
       </div>
@@ -149,7 +149,7 @@
   object-position: center;
 }
 .card h4 {
-  color: green;
+  color: #377d71;
 }
 
 .arrow {
@@ -175,6 +175,7 @@
 }
 .partners button {
   margin-left: 20px;
+  border: none;
   border-radius: 10px;
   color: white;
   background-color: #479595;
@@ -182,15 +183,14 @@
 }
 
 .partners button:hover {
-  padding: 5px;
-  color: black;
   transition: 0.1s;
+  background-color: #1e5757;
 }
 
 .row-2 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 0 5px 0;
 }
 

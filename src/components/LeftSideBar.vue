@@ -1,88 +1,52 @@
 <template>
-     <div class="sidebar">
-      <div class="leftbar">
-        <a class="link" href="#"
-          >Basic High School<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 20px"
-          ></i>
-        </a>
-        <a  class="link" href="#"
-          >Tertiary<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 90px"
-          ></i
-        ></a>
-        <a  class="link" href="#"
-          >Start Up<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 85px"
-          ></i
-        ></a>
-        <br />
+  <div class="sidebar">
+    <div class="leftbar">
+      <a class="link" href="#"
+        >Basic High School<i
+          class="fa fa-angle-right"
+          style="font-size: 24px; margin-left: 20px"
+        ></i>
+      </a>
+      <a class="link" href="#"
+        >Tertiary<i
+          class="fa fa-angle-right"
+          style="font-size: 24px; margin-left: 90px"
+        ></i
+      ></a>
+      <a class="link" href="#"
+        >Start Up<i
+          class="fa fa-angle-right"
+          style="font-size: 24px; margin-left: 85px"
+        ></i
+      ></a>
+      <br />
+      <div class="user">
         <h4><i class="fa fa-user"></i> About Us</h4>
-        <a class="text" style="color: white;"
+        <a class="text" style="color: white"
           ><i class="fa fa-sign-in" aria-hidden="true"></i>
-            Login
-          </a
-        >
+          Login
+        </a>
       </div>
     </div>
-
-    <!-- media queries -->
-    <!-- <div class="media-queries">
-      <span @click="toggleSideBar()">Click here to show left sidebar</span>
-    </div>
-
-     <div v-if="openSidebar" class="sidebar-collapsible">
-      <div class="leftbar">
-        <a class="link" href="#"
-          >Basic High School<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 20px"
-          ></i>
-        </a>
-        <a  class="link" href="#"
-          >Tertiary<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 90px"
-          ></i
-        ></a>
-        <a  class="link" href="#"
-          >Start Up<i
-            class="fa fa-angle-right"
-            style="font-size: 24px; margin-left: 85px"
-          ></i
-        ></a>
-        <br />
-        <h4><i class="fa fa-user"></i> About Us</h4>
-        <router-link class="text" style="color: white;" to="./form"
-          ><i class="fa fa-sign-in" aria-hidden="true"></i>
-            Login
-        </router-link
-        >
-      </div>
-    </div> -->
- 
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       openSidebar: false,
-    }
+    };
   },
- 
-}
+};
 </script>
 <style scoped>
 .sidebar {
   padding: 0;
-  background-color: #557C83;
+  background-color: #377D71;
   position: fixed;
-  height: 95%;
-  margin-top: 6%;
+  height: 100%;
+  margin-top: 8%;
   overflow: auto;
   width: 16%;
 }
@@ -101,6 +65,7 @@ export default {
   transition: 0.4s;
   cursor: pointer;
 }
+
 
 .leftbar {
   margin-top: 10vh;
@@ -135,15 +100,13 @@ div .content {
   cursor: pointer;
 }
 
-
-
-.media-queries {
-  display: none;
+.user {
+  position: fixed;
 }
 
 /* media queries */
 
-@media only screen and (max-width: 1409px ){
+@media only screen and (max-width: 1409px) {
   .sidebar .link {
     margin-left: 0 !important;
   }
@@ -157,11 +120,9 @@ div .content {
   }
 }
 
-@media only screen and (max-width: 1033px ) {
-   .sidebar {
-      display: none;
-   }
-
+@media only screen and (max-width: 1033px) {
+  .sidebar {
+    display: none;
+  }
 }
-
 </style>
